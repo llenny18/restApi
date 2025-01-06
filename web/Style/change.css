@@ -1,0 +1,158 @@
+/* Reset some default styles */
+@font-face {
+    font-family: 'Monotype Old English Text';  /* Define the name of the font */
+    src:url(fonts/Monotype Old English Text W01.ttf) format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header-top {
+    background-color: #001f3f;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.school-info {
+    display: flex;
+    align-items: center;
+}
+
+.school-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+/* Apply the font to h1 */
+h1 {
+    font-family: 'Monotype Old English Text W01', serif;  /* Apply the custom font */
+    font-size: 36px;
+    font-weight: 350;  /* Make it bold */
+    color: #ffffff;  /* Set the font color */
+}
+
+
+p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Back Arrow Button Container */
+.back-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.back-button {
+    font-size: 24px; /* Adjust size of the arrow */
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0e1c39;
+}
+
+/* Form Content Styling */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.change-password-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #12234e;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #12234e;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #12234e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0e1c39;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .school-info {
+        margin-bottom: 10px;
+    }
+
+    .change-password-box {
+        width: 90%;
+        padding: 20px;
+    }
+}

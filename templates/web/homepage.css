@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'GoudyTextMT';
+  src: url('path-to-your-font/GoudyTextMT.ttf') format('truetype');
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-top img {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.header-top .school-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-top .school-info h1 {
+    font-family: 'GoudyTextMT', serif;
+    font-size: 28px;
+    color: #000;
+    margin: 0;
+}
+
+.header-top .school-info p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header-top .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .icons input[type="search"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.header-top .icons a {
+    color: #002147;
+    font-size: 18px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.header-top .icons a:hover {
+    color: #0056b3;
+}
+
+.user-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  color: #000; /* You can adjust this to match your design */
+  font-weight: bold;
+}
+
+/* Center the navigation buttons */
+nav {
+    background-color: #002147;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    width: 100%; /* Ensure footer spans the entire width */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+.school-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.school-section h1, .school-section h2, .school-section h3 {
+    color: #002147; /* Letran's blue color */
+    margin-bottom: 10px;
+}
+
+.school-section p {
+    margin-bottom: 20px;
+}
+
+.school-section ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+}
+
+.school-section li {
+    margin-bottom: 10px;
+}
+
+.school-section h1 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.school-section h2 {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.school-section h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+.sbma-logo {
+    text-align: center; /* Center the logo horizontally */
+    margin-bottom: 30px; /* Adds space below the logo */
+}
+
+.sbma-logo img {
+    width: 250px; /* Adjust the width of the logo */
+    height: auto;  /* Keeps the aspect ratio of the logo */
+}

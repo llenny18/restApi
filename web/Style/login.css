@@ -1,0 +1,208 @@
+body {
+    background-color: #fff; /* White background */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for absolute positioning of images */
+}
+
+.logo-bg,
+.sbma-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; /* 50% opacity */
+    animation: animateBackground 10s infinite alternate; /* Change duration as needed */
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: scale(0.1); /* Initial size */
+    }
+    50% {
+        transform: scale(0.2); /* Intermediate size */
+    }
+    100% {
+        transform: scale(0.1); /* Final size */
+    }
+}
+
+.logo-bg {
+    background-image: url('logo.png'); /* Logo background image */
+}
+
+.sbma-bg {
+    background-image: url('sbma.png'); /* SBMA background image */
+}
+
+/* Other CSS styles remain unchanged */
+.login {
+    width: 400px;
+    margin: 16px auto;
+    font-size: 16px;
+    background: #fff; /* White */
+    border: 2px solid #000; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: #ff0000; /* Red */
+}
+
+.login-header {
+    background: #fff; /* White */
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff0000; /* Red */
+}
+
+.login-container {
+    background: #fff; /* White */
+    padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+    padding: 12px;
+}
+
+.login input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+    background: #fff; /* White */
+    border-color: #00f; /* Blue */
+    color: rgb(0, 0, 0);
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    border-color: #888;
+}
+
+.login input[type="submit"] {
+    background: rgb(0, 0, 255); /* Blue */
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+    background: #0080ff; /* Lighter blue */
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+    border-color: #05a;
+}
+.options-menu {
+    position: relative;
+}
+
+.options-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.options-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.options-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.options-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff; /* White */
+    color: #ff0000; /* Red */
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 999;
+    border: 2px solid #00f; /* Blue */
+}
+
+.help-button:hover {
+    background-color: #f00; /* Darker red */
+    color: #fff; /* White */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* Existing CSS styles remain unchanged */
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    display: inline-block; /* Ensure the logos are inline-block elements */
+    margin-right: 2px; /* Adjust the margin between the logos */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

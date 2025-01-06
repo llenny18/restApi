@@ -1,0 +1,223 @@
+/* General Body Styling */
+body {
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  color: #333;
+}
+.back-button {
+    background-color: #f44336; /* Red color for the back button */
+}
+
+.back-button:hover {
+    background-color: #e53935; /* Darker red for hover effect */
+}
+/* Header Styling */
+.taskbar {
+  background-color: #001f3f; /* Dark blue background */
+  color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.taskbar .logo {
+  width: 60px;
+  height: 60px;
+  background-image: url('logo.png'); /* Logo path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Back Button Styling */
+.back-button {
+  color: #001f3f;
+  background: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background: #f3f3f3;
+  color: #333333;
+}
+
+/* Centered Section Styling */
+.section {
+  background: #f3f3f3;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels and Headings */
+h1 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* Input Fields Styling */
+textarea, input[type="text"], select {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.white-text {
+  color: #ffffff; /* White font color */
+}
+
+/* File Input Styling */
+input[type="file"] {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Image Preview Styling */
+.imagePreview img {
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.imagePreview p {
+  color: #999;
+}
+
+/* Button Styling */
+button, .btn {
+  background: #F73B35;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #ff0000;
+}
+
+#textQuestionInput textarea {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 50px; /* Minimum height */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  resize: none; /* Disable manual resize, as it will be automatic */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  overflow: hidden; /* Hide scrollbars */
+}
+
+
+
+/* Input Fields Styling */
+#Question, #Answer, select {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#Answer, select {
+  width: 20%;
+  max-width: 100px;
+}
+
+.topicInput {
+  width: 100%; /* Allow the container to take full width */
+  margin-top: 20px; /* Increased margin for better spacing */
+  text-align: center; /* Center-align content within the container */
+}
+
+.topicInput select {
+  width: 60% !important; /* Set to 60% of the parent container width */
+  max-width: 600px !important; /* Restrict to a maximum width */
+  height: 50px !important; /* Slightly taller for better usability */
+  font-size: 18px !important; /* Slightly larger font size */
+  padding: 10px !important; /* Increased padding for better touch experience */
+  border-radius: 8px !important; /* More rounded corners for modern look */
+  border: 1px solid #bbb !important; /* Softer border color */
+  box-sizing: border-box !important; /* Include padding and border in width calculation */
+}
+
+
+/* Button Styling */
+.btn, .btn-action {
+  background: #F73B35;
+  border-radius: 5px;
+  border: 1px solid #f7170f;
+  box-shadow: 0px 0px 10px #000;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  text-shadow: 0px 0px 3px #333;
+}
+
+.btn:hover, .btn-action:hover {
+  background-color: #ff0000;
+  border-color: #f80000;
+  box-shadow: 0px 0px 20px #111;
+  color: #eee;
+}
+
+/* Choices Input Styling */
+input[type="text"] {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 18px;
+  width: 15%;
+  margin-right: 10px;
+}
+
+/* Additional Form Styles for File Input and Other Elements */
+input[type="file"] {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px;
+}

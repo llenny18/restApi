@@ -1,0 +1,210 @@
+body {
+  background-color: #f9f9f9; /* Light gray background */
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark gray for readability */
+}
+
+/* Centered Header Styling */
+.taskbar {
+  background-color: #001f3f; /* Dark blue background */
+  color: #ffffff; /* White text */
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo, buttons, and logout */
+  font-family: 'Arial', sans-serif;
+  font-size: 18px; /* Larger font for readability */
+  font-weight: bold;
+  position: relative;
+}
+
+/* Logo Styling - Positioned on the far left */
+.taskbar .logo {
+  display: inline-block;
+  width: 60px; /* Adjust logo size */
+  height: 60px;
+  background-image: url('logo.png'); /* Update logo path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px; /* Space between logo and buttons */
+}
+
+/* Back Button Styling - Positioned below the logo */
+.back-button {
+  position: absolute;
+  left: 20px; /* Align to the left with the logo */
+  top: 120px; /* Increase the value to move the button further down */
+  font-size: 16px;
+  color: #ffffff; /* White text */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 16px;
+  background-color: #001f3f; /* Same dark blue as header */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #333333; /* Darker shade on hover */
+}
+
+/* Taskbar Button Styling - Centered */
+.taskbar-center {
+  display: flex;
+  justify-content: center; /* Center align buttons */
+  gap: 30px; /* Space between buttons */
+  flex-grow: 1; /* Expand to take available space */
+}
+
+.taskbar-button {
+  color: #ffffff; /* White text */
+  background: none; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.taskbar-button:hover {
+  background-color: #333333; /* Darker background on hover */
+  border-radius: 5px;
+}
+
+/* Logout Button Styling - Far Right */
+.logout {
+  background-color: #d9534f; /* Red background */
+  color: #ffffff; /* White text */
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none; /* Remove underline */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+  background-color: #c9302c; /* Darker red on hover */
+}
+.section {
+  text-align: center; /* Center align content */
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Table Styling */
+.table-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (if needed) */
+  margin-top: 20px;
+}
+
+/* Table Styling */
+.table {
+  border-collapse: collapse;
+  width: 90%; /* Adjust width as needed */
+  font-size: 14px; /* Adjusted font size */
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left; /* Left-align for readability */
+}
+
+.table th {
+  background-color: #001f3f; /* Dark blue for table header */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for alternating rows */
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* Subtle highlight on hover */
+}
+
+/* Button Styling */
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.edit-button {
+  background-color: #4CAF50; /* Green for edit */
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.edit-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.delete-button {
+  background-color: #f44336; /* Red for delete */
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Add Questions Button */
+.btn {
+  background-color: #001f3f; /* Dark blue for consistency */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #333333;
+}
+
+/* Search Form Styling */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"] {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+form input[type="submit"] {
+  background-color: #001f3f; /* Same as header */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #333333;
+}

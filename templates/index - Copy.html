@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPAce Board Exam Reviewer</title>
+    <link rel="stylesheet" href="web/Style/logging.css"> <!-- Link to external CSS --> <!-- Link to external CSS -->
+    <link href="https://db.onlinewebfonts.com/c/be6ee7dae05b1862ef6f63d5e2145706?family=Monotype+Old+English+Text+W01" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="web/Style/cpace.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="web/Style/logo.png" alt="Logo" class="logo-img">
+                <div class="school-info">
+                    <h1>Colegio de San Juan de Letran Calamba</h1>
+                    <p>Bucal, Calamba City, Laguna, Philippines • 4027</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Background Section -->
+    <div class="background">
+        <div class="wrapper">
+            <h2 class="active">Log In</h2>
+            <div class="fadeIn first">
+                <img src="web/Style/logo.png" alt="Logo">
+                <img src="web/Style/SBMA_logo.png" alt="SBMA Logo">
+                <h1>CPAce Board Exam Reviewer</h1>
+            </div>
+            <form class="login-container" action="web/loginPHP.php" method="POST">
+                <input type="text" name="username" placeholder="ID Number" required maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Log in">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to send data to Flask API
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent default form submission
+
+            const username = document.querySelector('[name="username"]').value;
+            const password = document.querySelector('[name="password"]').value;
+
+            // Create data object to send to Flask
+            const studentData = {
+                username: username,  // Send student ID
+                password: password   // You might want to use this in your authentication
+            };
+
+            // Send a POST request to Flask API (change URL if needed)
+            fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(studentData)  // Convert data to JSON format
+            })
+            .then(response => response.json())  // Parse JSON response
+            .then(data => {
+                console.log(data);  // Log the result from Flask
+                // You can display the predictions and recommendations here
+            })
+            .catch(error => console.error('Error:', error));  // Handle errors
+        });
+
+        document.getElementById('username').addEventListener('input', function (event) {
+            const input = event.target;
+            input.value = input.value.replace(/[^0-9]/g, ''); // Allow only numeric characters
+        });
+    </script>
+</body>
+</html>

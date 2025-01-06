@@ -1,0 +1,266 @@
+/* Header Styling */
+@font-face {
+    font-family: 'Monotype Old English Text'; /* Define the name of the font */
+    src: url(fonts/Monotype Old English Text W01.ttf) format('truetype');
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001f3f; /* Header background color */
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10; /* Ensure it is above the taskbar */
+}
+
+/* Left section for logo and school info */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.header-top .logo {
+    width: 80px; /* Logo size */
+    height: 80px;
+    background-image: url('logo.png'); /* Update logo path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.header-icon {
+    max-height: 150px; /* Adjust size as needed */
+    object-fit: contain;
+}
+
+/* School Info Styling */
+.school-info {
+    text-align: left; /* Align text to the left */
+}
+
+.school-info h1 {
+    font-family: 'Monotype Old English Text W01', serif; /* Apply the custom font */
+    font-size: 36px;
+    font-weight: 350; /* Make it bold */
+    color: #ffffff; /* Set the font color */
+}
+
+.school-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #d0d0d0; /* Light gray for additional info */
+}
+
+/* Section Styling */
+.section {
+    background: #ffffff;
+    width: 90%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    text-align: center;
+}
+
+/* Taskbar container */
+.taskbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d3b6e; /* Background for taskbar */
+    padding: 10px 20px;
+    border-bottom: 2px solid #12234e;
+    position: sticky; /* Makes the taskbar fixed when scrolling */
+    top: 0; /* Ensures it sticks just below the header */
+    z-index: 5; /* Places it behind the header */
+}
+
+/* Center section of the taskbar */
+.taskbar-center {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    justify-content: center;
+    flex: 1;
+}
+
+/* Right section of the taskbar */
+.taskbar-right {
+    flex-shrink: 0;
+}
+
+/* Style for buttons */
+.taskbar-button {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #2a4f91;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Space between buttons */
+}
+
+/* Hover effect */
+.taskbar-button:hover {
+    background-color: #385d9f;
+}
+
+/* Logout button specific styling */
+.taskbar-button.logout {
+    background-color: #e63946;
+}
+
+.taskbar-button.logout:hover {
+    background-color: #b71c1c;
+}
+
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f9f9f9; /* Light background for rows */
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  background-color: #001f3f; /* Dark blue header */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row color */
+}
+
+.table tr:hover {
+  background-color: #e0e0e0; /* Highlight row on hover */
+}
+
+/* Button Styling */
+.btn {
+  background-color: #F73B35; /* Red background */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ff4d4d; /* Lighter red on hover */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+  transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Toggle Buttons Styling */
+.toggle-btn {
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+
+/* Action Buttons Styling */
+.action-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.action-btn.view-progress {
+  background-color: #28a745; /* Green background */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.action-btn.view-progress:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.action-btn.delete {
+  background-color: #dc3545; /* Red background */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.action-btn.delete:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Search Section Styling */
+.search-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.search-section input[type="text"] {
+  width: 40%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.search-section input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-section input[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.hidden {
+  display: none;
+}
+
+/* Active button styling */
+.toggle-btn.active {
+  background-color: #0056b3; /* Darker blue */
+  color: white;
+}

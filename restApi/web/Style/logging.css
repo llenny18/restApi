@@ -1,0 +1,189 @@
+/* General Reset */
+
+@font-face {
+    font-family: 'Monotype Old English Text';  /* Define the name of the font */
+    src:url(fonts/Monotype Old English Text W01.ttf) format('truetype');
+}
+
+body, h1, h2, h3, p, ul, li, a, img, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: url('bgsbma.png') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #ffffff; /* White background for the header */
+    border-bottom: 2px solid #eaeaea; /* Subtle divider below the header */
+    padding: 15px 20px;
+    color: #333;
+    position: relative; /* To allow absolute positioning of center logo */
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between left and right sections */
+    position: relative; /* Relative positioning for the center logo */
+}
+
+/* Logo Section */
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .logo-img {
+    width: 80px;
+    height: auto;
+}
+
+.header .school-info h1 {
+    font-family: 'Monotype Old English Text W01', serif;  /* Apply the custom font */
+    font-size: 36px;
+    font-weight: 350;  /* Make it bold */
+    color: black;  /* Set the font color */
+}
+
+.header .school-info p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Center Section for CPAce Logo */
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.header-center .header-icon {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-center {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .header .school-info h1 {
+        font-size: 18px;
+    }
+
+    .header .logo-img {
+        width: 40px;
+    }
+
+    .header-center .header-icon {
+        max-width: 80px;
+    }
+}
+/* Background Section */
+.background {
+    flex: 1; /* Ensure background stretches to fill remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper Section */
+.wrapper {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent login box */
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.wrapper h2.active {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Logo and SBMA Section */
+.fadeIn.first {
+    margin-bottom: 20px;
+}
+
+.fadeIn.first img {
+    display: inline-block;
+    margin: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.fadeIn.first h1 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Login Form */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-container input[type="submit"] {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+#formFooter {
+    margin-top: 20px;
+}
+
+#formFooter a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+#formFooter a:hover {
+    color: #0056b3;
+}

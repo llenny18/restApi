@@ -1,0 +1,224 @@
+
+/* Global Styles */
+@font-face {
+    font-family: 'Monotype Old English Text'; /* Define the name of the font */
+    src: url(fonts/Monotype Old English Text W01.ttf) format('truetype');
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styling */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #12234e; /* Header background color */
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Header Styling */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001f3f; /* Header background color */
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Left Section: Logo and School Info */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.header-top .logo {
+    width: 80px; /* Logo size */
+    height: 80px;
+    background-image: url('logo.png'); /* Update logo path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+}
+
+
+/* School Info Styling */
+.school-info {
+    text-align: left;
+}
+
+.school-info h1 {
+    font-family: 'Monotype Old English Text W01', serif; /* Apply the custom font */
+    font-size: 36px;
+    font-weight: 350; /* Make it bold */
+    color: #ffffff; /* Set the font color */
+}
+
+.school-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #d0d0d0; /* Light gray text */
+}
+
+/* Center Section: CPAce Icon */
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.header-icon {
+    max-height: 150px; /* Adjust size as needed */
+    object-fit: contain;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .header-center {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .school-info h1 {
+        font-size: 20px;
+    }
+}
+
+.back-btn {
+    display: block;
+    background-color: #e63946; /* Back button color */
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 15px; /* Align vertically */
+    right: 15px; /* Align to the far-right of the header */
+}
+
+.back-btn:hover {
+    background-color: #b71c1c; /* Hover effect */
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: space-between;
+}
+
+/* Chart Section */
+.chart-container {
+    flex: 4; /* Chart takes up more space compared to the text section */
+    padding: 20px;
+    border-right: 1px solid #ddd; /* Optional divider */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chart Canvas */
+canvas {
+    width: 300%; /* Increase the chart width */
+    height: 900px; /* Set a larger height for the chart */
+    max-width: 1000px; /* Set a larger max width */
+}
+
+/* Text Section */
+.text-container {
+    flex: 1; /* Text takes up half the space */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background for contrast */
+    border-radius: 8px; /* Rounded corners for better visuals */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Section Title */
+.text-container h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #12234e; /* Match header color for consistency */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Scores List */
+.text-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-container ul li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: white; /* White background for each item */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 6px; /* Rounded corners for each item */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    font-size: 18px;
+    font-weight: 500; /* Semi-bold for emphasis */
+    color: #333; /* Darker text for readability */
+    display: flex;
+    justify-content: space-between; /* Space out labels and scores */
+    align-items: center;
+}
+
+/* Highlighted text for score numbers */
+.text-container ul li span {
+    font-weight: bold;
+    color: #e63946; /* Highlight scores in red for emphasis */
+    font-size: 20px;
+}
+
+/* Add hover effect */
+.text-container ul li:hover {
+    background-color: #f1f1f1; /* Slightly darker background on hover */
+    cursor: default;
+}
+
+
+/* Section Titles */
+.container h1, .container h2, .container h3 {
+    color: #12234e;
+    margin-bottom: 20px;
+    text-align: center;
+}

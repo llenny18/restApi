@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="result.css"> <!-- Include your CSS file here -->
+    <!-- Include any libraries or scripts for generating charts here -->
+    <!-- For example, you might include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    /* CSS styles for the popup */
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+.popup a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.popup a:hover {
+    background-color: #ddd;
+}
+
+/* CSS styles for the header */
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* CSS styles for the result container */
+.result-container {
+    display: flex;
+    margin: 20px auto; /* Set margin to auto to center horizontally */
+    max-width: 800px; /* Optional: Set maximum width for better layout on larger screens */
+}
+
+/* CSS styles for the left part showing results */
+.result-left {
+    flex-grow: 1;
+    padding: 20px 50px; /* Adjust the padding */
+}
+
+/* CSS styles for each subject result */
+.result-left h3 {
+    margin-top: 0;
+}
+
+/* CSS styles for the right part showing pie chart */
+.result-right {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* CSS styles for the logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container img {
+    max-width: 150px; /* Adjust the maximum width of the logo */
+}
+
+/* CSS styles for the pie chart canvas */
+.result-right canvas {
+    max-width: 200px; /* Adjust the maximum width of the canvas */
+    max-height: 200px; /* Adjust the maximum height of the canvas */
+}
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+.popup.show {
+    display: block;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            
+            <div class="options">
+                <button id="option-btn">&#9776;</button> <!-- Three horizontal lines button -->
+                <div class="popup" id="myPopup"> <!-- Popup menu -->
+                    <a href="homepage.php">Back to Homepage</a>
+                    <a href="index.php">Log Out</a>
+                </div>
+            </div>
+        </nav>
+        <div class="logo-container">
+            <img src="Style/logo.png" alt="Logo">
+        </div>
+        <h1>Results</h1>
+        <h2>ID Number: 3210045</h2>
+    </header>
+    <main>
+        <div class="result-container">
+            <div class="result-left">
+                <!-- Left part showing results -->
+                <h3>Subject 1</h3>
+                <p>Score: 5%</p>
+                <!-- Add more subject results as needed -->
+                <h3>Subject 2</h3>
+                <p>Score: 2%</p>
+                <h3>Subject 3</h3>
+                <p>Score: 3%</p>
+                <h3>Subject 4</h3>
+                <p>Score: 1%</p>
+                <h3>Subject 5</h3>
+                <p>Score: 0%</p>
+            </div>
+            <div class="result-right">
+                <!-- Right part showing pie chart -->
+                <canvas id="pieChart" width="200" height="200"></canvas>
+            </div>
+        </div>
+    </main>
+    
+
+    <script>
+        
+        // JavaScript to generate pie chart
+        document.addEventListener("DOMContentLoaded", function() {
+            var ctx = document.getElementById('pieChart').getContext('2d');
+            var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Pass', 'Fail'],
+                    datasets: [{
+                        data: [1, 25, 25, 15], // Example data, replace with actual data
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.6)', // Blue for Pass
+                            'rgba(255, 255, 132, 0.6)',
+                            'rgba(255, 99, 255, 0.6)',
+                            'rgba(255, 99, 132, 0.6)'
+                             // Red for Fail
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Subject 1 Result'
+                    }
+                }
+            });
+
+            // JavaScript for the option button functionality
+            var optionBtn = document.getElementById('option-btn');
+            var popup = document.getElementById('myPopup');
+
+            optionBtn.addEventListener('click', function() {
+                popup.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* Instructions Section */
+#instructions {
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px;
+    max-width: 900px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#instructions h2 {
+    font-size: 20px;
+    color: #333;
+    text-align: center; /* Center align the heading */
+}
+#instructions h3 {
+    font-size: 15px;
+    color: #333;
+    text-align: center; /* Center align the heading */
+}
+
+#instructions ul {
+    list-style-type: square;
+    padding-left: 20px;
+    line-height: 1.6; /* Increase line spacing for readability */
+}
+
+#instructions ul ul {
+    list-style-type: circle;
+}
+
+/* Start Exam Button */
+#start-exam {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#start-exam .button {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+#start-exam .button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+#start-exam .button:active {
+    transform: scale(1); /* Reset zoom on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}

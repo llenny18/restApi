@@ -1,0 +1,250 @@
+/* Basic CSS styling */
+@font-face {
+    font-family: 'Monotype Old English Text';  /* Define the name of the font */
+    src:url(fonts/Monotype Old English Text W01.ttf) format('truetype');
+}
+/* Taskbar Styling */
+.taskbar {
+    background-color: whitesmoke; /* Dark blue background */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 0px;
+}
+/* Ensure the header takes up the full width and is evenly spaced */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #001f3f; /* Adjust the background color */
+    color: white; /* Default color for text in header */
+    position: relative;
+}
+
+/* Style for the left school logo */
+.logo-left {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adds space between the school logo and the school info */
+}
+
+.logo-img {
+    width: 100px;  /* Adjust the width as necessary */
+    height: auto;
+}
+
+/* Center logo style */
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the logo horizontally */
+}
+
+.logo-center-img {
+    width: 150px;  /* Adjust the size of the cpace1 logo */
+    height: auto;
+}
+
+/* Move school info to the left and make it white */
+.school-info {
+    display: flex;
+    flex-direction: column;
+    color: white; /* Text color for school name and info */
+}
+
+.school-info h1 {
+    font-family: 'Monotype Old English Text W01', serif;  /* Apply the custom font */
+    font-size: 35px;
+    font-weight: 350;  /* Make it bold */
+    color: #ffffff;  /* Set the font color */
+}
+
+.school-info p {
+    font-size: 1rem;
+    margin: 0;
+}
+.back-button {
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 13px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+
+/* Taskbar Links */
+.taskbar-links {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 30px;
+}
+
+.taskbar-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #001f3f; /* Same blue as header */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.taskbar-button:hover {
+    background-color: #0056b3; /* Slightly lighter blue on hover */
+}
+
+/* Logout Button */
+.taskbar-button.logout {
+    background-color: #d9534f;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.taskbar-button.logout:hover {
+    background-color: #c9302c;
+}
+
+/* Container Section Styling */
+.section {
+    background: #ffffff;
+    width: 90%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table th {
+    background-color: #001f3f; /* Dark blue header */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) td {
+    background-color: #f2f2f2; /* Light grey for alternate rows */
+}
+
+.table tr:hover td {
+    background-color: #ddd; /* Light grey on hover */
+}
+
+/* Button Styling */
+.btn {
+    background-color: #F73B35; /* Red button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.btn:hover {
+    background-color: #ff0000; /* Darker red on hover */
+}
+
+/* Edit Button Styling */
+.edit-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Delete Button Styling */
+.delete-button {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Center Text */
+.textCenter {
+    text-align: center;
+}
+
+/* Table Container Section */
+.section {
+    background: #f3f3f3;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 25px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Enhanced Table Styling with Larger Font */
+.table th,
+.table td {
+    font-size: 18px; /* Increased font size for better readability */
+}
+
+/* Taskbar Button (Teacher/Student) Styling */
+button {
+    background-color: #007bff; /* Bootstrap blue for Student/Teacher buttons */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

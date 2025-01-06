@@ -1,0 +1,223 @@
+/* Basic CSS styling */
+@font-face {
+    font-family: 'Monotype Old English Text';  /* Define the name of the font */
+    src:url(fonts/Monotype Old English Text W01.ttf) format('truetype');
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px; /* Create space for fixed header */
+}
+
+/* Header Top Styles */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Distribute content evenly */
+    align-items: center; /* Vertically center items */
+    background-color: #001f3f;
+    color: white;
+    padding: 10px 20px; /* Padding for spacing */
+    position: fixed; /* Fix the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Prevent overflow */
+    background: #12234e; /* Ensure background stays behind content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* School Info Styles */
+.school-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
+}
+
+.school-info img {
+    height: 60px; /* Set logo size */
+    margin-right: 15px;
+}
+
+.school-info h1 {
+    font-family: 'Monotype Old English Text W01', serif;  /* Apply the custom font */
+    font-size: 35px;
+    font-weight: 350;  /* Make it bold */
+    color: #ffffff;  /* Set the font color */
+}
+.school-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Timer Styles */
+#timer {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    /* Removed unnecessary margin to center the timer */
+}
+
+/* Centered Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center logo */
+    align-items: center; /* Vertically center the logo */
+}
+
+/* Adjust logo size */
+.logo-container .logo {
+    height: 125px; /* Adjust logo size */
+}
+
+/* Optional: Add padding to the body to ensure content below header is not hidden */
+body {
+    padding-top: 100px; /* Adjust according to header height */
+}
+
+/* Optional: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+    }
+
+    .school-info {
+        margin-bottom: 10px; /* Add space between school info and timer */
+        text-align: center; /* Center the text */
+    }
+
+    .school-info img {
+        height: 50px; /* Reduce logo size on small screens */
+        margin-right: 0;
+    }
+
+    #timer {
+        font-size: 18px; /* Adjust font size on smaller screens */
+    }
+
+    .logo-container .logo {
+        height: 100px; /* Reduce logo size */
+    }
+}
+
+/* Container for the exam content */
+.container {
+    background-color: white;
+    padding-top: 80px; /* Adjusted for header height */
+    padding: 30px; /* Reduced padding to make the box less thick */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    width: 80%; /* Adjusted width to make it more compact */
+    max-width: 1200px;
+    overflow: visible; /* Ensure that the content is not hidden */
+    margin-left: auto;
+    margin-right: auto; /* Centers the container */
+}
+
+/* Additional styles for the rest of your page */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #12234e;
+}
+
+/* Style for topic titles */
+h3 {
+    color: #12234e;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #12234e;
+}
+
+/* Question container */
+.question-box {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    clear: both; /* Clear any floating elements */
+}
+
+/* Question text style */
+.question-box p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Style for options */
+.question-box label {
+    display: block;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.question-box input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Scenario container */
+.scenario-container {
+    padding: 10px;
+    background-color: #e8f4f8;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Image style for scenarios and questions */
+.scenario-container img, .question-box img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Submit button style */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #12234e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0f1a30;
+}
+
+/* Ensure that the container adapts to different screen sizes */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    #timer {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .question-box {
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
