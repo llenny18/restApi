@@ -22,12 +22,11 @@ recommend_process = subprocess.Popen(["python", "recommend.py"])
 def get_db_connection():
     try:
         connection = mysql.connector.connect(
-            host='localhost',
-            database='cpa',
-            user='root',
-            password='',
-            charset="utf8mb4",
-            collation="utf8mb4_general_ci"
+            host='153.92.15.32',         
+			database='u657315869_cpa1',  
+			user='u657315869_cpa1',       
+			password='IloveCPAce123!',      
+			connection_timeout=6000   
         )
         return connection
     except mysql.connector.Error as err:
@@ -252,7 +251,7 @@ def predict(student_id):
 if __name__ == '__main__':
     try:
         if __name__ == "__main__":
-            app.run(host="127.0.0.1", port=5005, debug=True)
+            app.run(host="0.0.0.0", port=5000, debug=True)
 
     finally:
         recommend_process.terminate()
